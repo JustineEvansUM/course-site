@@ -1,8 +1,10 @@
-company_name: The Sheep Vote
-mission_statement: The Sheep Vote is a non-profit organisation started in 2005 by the great shepard, Wooly McBaa.
-address: 123 Example Street, City
-phone: +1 123 456 7891
-email: donate@yourwebsite.com
-facebook: CloudCannon
-twitter: CloudCannonApp
-google_plus: +CloudCannon
+company_name: Media-Ed-Online
+mission_statement: Distance learning provider of courses and lessons from the world of digital design and media.
+admin: Justine Evans
+email: admin@media-ed-online.com
+website: https://www.media-ed-online.com
+address: Montana, USA
+linkedin: justineevans
+codepen: media-ed-online
+github: media-ed-online
+#google_plus: +CloudCannon

@@ -1,0 +1,83 @@
+<div class="container">
+  <div id="address">
+    <i class="fas fa-map-marker-alt"></i> Montana, USA
+  </div>
+  <div id="email">
+    <i class="fas fa-envelope"></i> <a href="mailto:justine.n.evans@gmail.com">justine.n.evans@gmail.com</a>
+  </div>
+  <div id="website">
+    <i class="fas fa-globe"></i> <a href="https://www.media-ed-online.com">media-ed-online.com</a>
+  </div>
+  <div id="linkedin">
+    <i class="fab fa-linkedin"></i> /<a href="https://www.linkedin.com/in/justineevans/">justineevans</a>
+  </div>
+</div>
+
+footer {
+	background: #555;
+	font-weight: 300;
+	padding: 20px 0;
+
+	&, a {
+		color: #fff;
+	}
+
+	a:hover {
+		color: #fff;
+
+		svg {
+			fill: #fff;
+		}
+	}
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+
+	div, address {
+		font-size: .9em;
+		white-space: nowrap;
+		letter-spacing: 2px;
+	}
+
+	i {
+		margin-right: 3px;
+	}
+
+	svg {
+		fill: #8e8e8e;
+		height: 20px;
+		position: relative;
+		top: 4px;
+	}
+
+	a {
+		text-decoration: none;
+
+		svg:hover {
+			fill: #fff;
+		}
+	}
+
+	.container {
+		@media #{$desktop} {
+			display: flex;
+			align-items: center;
+		}
+		div {
+			@media #{$desktop} {
+				width: 25%;
+				margin: 0;
+			}
+			margin: 20px 0;
+			box-sizing: content-box;
+			padding: 0 25px;
+			text-align: center;
+			border-right: 1px solid #999;
+		}
+		div:last-of-type {
+			border-right: 1px solid transparent;
+		}
+	}
+}

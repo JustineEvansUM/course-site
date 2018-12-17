@@ -1,27 +1,27 @@
 # ----
 # Site
 
-title: Cause Template
+title: Media-Ed-Online
 url: media-ed-online.com
 baseurl:
 google_analytics_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Jekyll template with example content for a not-for-profit organisation.
+description: A distance learning provider of courses and lessons from the world of digital design and media.
 author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
+  name: Justine Evans
+  email: justine.n.evans@gmail.com
+  website: http://www.justinenevans.com
 social:
-  name: Cause Template
+  name: GitHub
   links:
-    - https://github.com/CloudCannon/cause-jekyll-template
+    - https://github.com/Media-Ed-Online/
 
 # -----
 # Build
 
-timezone: Etc/UTC
+timezone: MST/UTC
 
 collections:
   staff_members:
@@ -50,7 +50,7 @@ defaults:
     values:
       layout: "default"
 
-donation_embed: '<script src="https://donorbox.org/widget.js" type="text/javascript"></script><iframe src="https://donorbox.org/embed/give-sheep-the-vote?hide_donation_meter=true" height="685px" width="100%" style="max-width:425px; min-width:310px" seamless="seamless" id="dbox-form-embed" name="donorbox" frameborder="0" scrolling="no"></iframe>'
+#donation_embed: '<script src="https://donorbox.org/widget.js" type="text/javascript"></script><iframe src="https://donorbox.org/embed/give-sheep-the-vote?hide_donation_meter=true" height="685px" width="100%" style="max-width:425px; min-width:310px" seamless="seamless" id="dbox-form-embed" name="donorbox" frameborder="0" scrolling="no"></iframe>'
 newsletter_action: "//your-mailchimp-action-url.com"
 
 plugins:
@@ -68,8 +68,8 @@ exclude:
 
 _options:
   header_background_image:
-    width: 1880
-    height: 1880
+    width: 1vw
+    height: 1vh
   newsletter_background_image:
     width: 1880
     height: 1880

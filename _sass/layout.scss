@@ -3,9 +3,10 @@
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	padding: 50px 30px;
+	padding: 100px 30px;
 	box-sizing: border-box;
 }
+
 
 header {
 	padding-bottom: 50px;
@@ -18,9 +19,14 @@ header {
 		.column {
 			flex: 1;
 
+			h1 {
+			font-family: 'BebasNeueRegular';
+			font-weight: normal;
+			font-style: normal;
+			}
 			img {
 				max-width: none;
-				width: 120%;
+				width: 100%;
 			}
 
 			&:first-child {
@@ -55,6 +61,35 @@ nav .button {
 	right: 35px;
 	top: 4px;
 }
+nav {
+	position: sticky;
+	top: 0;
+	margin-bottom: 10px;
+	padding: 10px 0;
+	z-index: 1;
+	background: #fff;
+	transition: all 0.15s linear;
+
+	display: flex;
+	a{
+		text-decoration: none;
+		color: #999;
+	}
+	a:hover {
+		color: $brand-color;
+		transition: all 0.3s linear;
+	}
+	ul {
+		float: right;
+		li {
+			display: inline-block;
+			margin: 0 1rem;
+		}
+	}
+}
+nav.active {
+		box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
 
 .thirds {
 	@media #{$desktop} {
@@ -81,13 +116,52 @@ nav .button {
 		.image {
 			display: inline-block;
 			line-height: 0;
-			background: white;
+			background-image: url(../images/callout.svg);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: top center;
 			margin-top: -40px;
 			padding: 10px;
-			box-shadow: 2px 7px 39px 9px #f7f7f7;
-			border-radius: 50px;
+			width: 60px;
+			height: 60px;
+
+			i {
+				font-size: 2em;
+				margin-top: 8px;
+				color: #222;
+			}
+		i:hover {
+			  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+			  transform: translate3d(0, 0, 0);
+			  backface-visibility: hidden;
+			  perspective: 1000px;
+			}
+
+			@keyframes shake {
+			  10%, 90% {
+			    transform: translate3d(-1px, 0, 0);
+			  }
+
+			  20%, 80% {
+			    transform: translate3d(1px, 0, 0);
+			  }
+
+			  30%, 50%, 70% {
+			    transform: translate3d(-3px, 0, 0);
+			  }
+
+			  40%, 60% {
+			    transform: translate3d(3px, 0, 0);
+			  }
+			}
 		}
 
+		h3 {
+			font-family: 'BebasNeueRegular';
+			font-weight: normal;
+			font-style: normal;
+			letter-spacing: 1px;
+		}
 		p {
 			font-size: 1.1rem;
 		}
@@ -100,7 +174,8 @@ nav .button {
 }
 blockquote {
 	padding: 0;
-	margin: 120px 0 70px 0;
+	/*margin: 120px 0 70px 0;*/
+	margin: 0;
 	position: relative;
 
 	.quote {
@@ -174,13 +249,31 @@ blockquote {
 	padding: 100px 0;
 }
 
-footer {
-	background: #000;
+.callout {
+	width: 100%;
+	height: 25px;
+	background-color: #f8fafb;
+	/*background-color: #fff;*/
+}
+.callout-arrow {
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 25px solid #555;
+	position: absolute;
+	right: 5em;
+}
 
-	padding: 40px 0;
+footer {
+	background: #555;
+
+	.container {
+		padding: 30px;
+	}
 
 	&, a {
-		color: #8e8e8e;
+		color: #fff;
 	}
 
 	a:hover {
@@ -197,7 +290,11 @@ footer {
 	}
 
 	p, address {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
 		font-size: .9em;
+		color: #fff;
+		letter-spacing: 1px;
 	}
 
 	svg {
@@ -205,6 +302,17 @@ footer {
 		height: 20px;
 		position: relative;
 		top: 4px;
+	}
+
+	i {
+		color: #999;
+		font-size: 1.2em;
+		margin: 5px;
+	}
+
+	i:hover {
+		color: #fff;
+		transition: all 0.3s linear;
 	}
 
 	a {
@@ -252,6 +360,8 @@ footer {
 .posts {
 	@media #{$desktop} {
 		display: flex;
+		/*display: grid;
+		grid-template-columns: 1fr 1fr 1fr;*/
 	}
 	margin: 0 -20px;
 	.post {
@@ -276,6 +386,16 @@ footer {
 
 		.post-content {
 			padding: 20px;
+
+			a {
+				text-decoration: none;
+			}
+			i {
+				color: $brand-yellow;
+				font-size: 1.3em;
+				vertical-align: middle;
+				margin-right: 5px;
+			}
 		}
 
 		.date {
@@ -285,7 +405,11 @@ footer {
 		}
 
 		h3 {
-			font-size: 1.5rem;
+			font-size: 2rem;
+			font-family: 'BebasNeueRegular';
+			font-weight: normal;
+			font-style: normal;
+			letter-spacing: 1px;
 		}
 
 		p {
@@ -306,6 +430,7 @@ footer {
 		font-size: .8em;
 		color: #888;
 	}
+
 }
 
 .editor-link {
@@ -342,7 +467,8 @@ footer {
 .columns {
 	@media #{$desktop} {
 		display: flex;
-		margin: 0 -30px;
+		/*margin: 0 -30px;*/
+		margin: 0 -30px 50px -30px;
 		align-items: center;
 		& > div {
 			flex: 1;
@@ -358,4 +484,50 @@ footer {
 .darker {
 	background: #f8fafb;
 	padding: 60px 0;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 10px;
+	background: #eaeaea;
+	border-radius: 5px;
+
+	.percent-complete {
+		height: 10px;
+		background: $brand-yellow;
+	}
+}
+
+.featured {
+	font-size: 1.5em;
+	/*font-family: 'BebasNeueRegular';*/
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 1px;
+	margin: 10px 0;
+	padding: 5px;
+	color: #555;
+}
+.roles {
+	font-size: .6em;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #FFF;
+
+	span {
+	padding: 1px 5px;
+	border-radius: 5px;
+	}
+
+	.inst {
+		background: $brand-color;
+	}
+	.cd {
+		background: #ffc600;
+	}
+	.id {
+		background: $brand-red;
+	}
 }

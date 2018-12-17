@@ -2,14 +2,20 @@
 layout: default
 title: The Sheep Vote
 ---
-<header>
+<header id="featured">
 	<div class="container">
 		<div class="column">
 			<div>
-				<h1 class="editable">Give sheep the vote</h1>
-				<p class="editable">Sheep are the backbone of the economy yet they receive no compensation.</p>
+				<p class="featured">Featured Course</p>
+				<h1>The Art & Science of Interactive Games</h1>
+				<p class="roles">
+					<span class="inst">Instructor</span>
+					<span class="cd">Cirriculum Designer</span>
+					<span class="id">Instructional Designer</span>
+				</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 				<div class="button">
-					<a href="#donate">Donate Now</a>
+					<a href="http://www.umontanamediaarts.com/MART342-2016/">Visit</a>
 				</div>
 			</div>
 		</div>
@@ -19,84 +25,185 @@ title: The Sheep Vote
 	</div>
 </header>
 
-<div class="container">
-	<h2 class="editable" style="text-align: center;">Why sheep need the vote</h2>
-
-	<ul class="thirds">
-		<li>
-			<div class="image">{% include icons/site.html icon="population" %}</div>
-			<h3 class="editable">Population</h3>
-			<p class="editable">New Zealand has a human population of just 4.5M while there are 70M sheep. </p>
-		</li>
-
-		<li>
-			<div class="image">{% include icons/site.html icon="economy" %}</div>
-			<h3 class="editable">Economy</h3>
-			<p class="editable">Sheep are the backbone of the economy yet they receive no compensation.</p>
-		</li>
-
-		<li>
-			<div class="image">{% include icons/site.html icon="conditions" %}</div>
-			<h3 class="editable">Work Conditions</h3>
-			<p class="editable">Sheep are forced to eat grass every day of their life. How about some of variety?</p>
-		</li>
-	</ul>
-</div>
-
-<div class="container">
+<div class="container" id="offerings">
+	<hr>
 	<div class="columns">
 		<div>
 			<img src="/images/sheep2.jpg" alt="Sheep">
 		</div>
 		<div>
-			<h2 class="editable">Our Mission</h2>
-
-			<p class="editable">Leave no sheep behind. Our mission to give sheep the right to vote and have them represented in parliament. For too long sheep have been exploited for their warm wool and delicious meat. It's time to put our hooves down and baa for what's right. Give sheep the vote!</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<hr>
-	<blockquote>
-		<p class="quote editable">The ultimate measure of a sheep is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
-		<div class="attribute">
-			<p class="meta">
-				<span class="image"><img class="editable" src="{{ site.baseurl }}/images/wooly.jpg" alt="Wooly"></span>
-				<span class="author editable"><strong>Wooly McBaa</strong></span>
+			<h2>Modern Horror Film</h2>
+			<p class="roles">
+				<span class="inst">Instructor</span>
+				<span class="id">Instructional Designer</span>
 			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="button">
+				<a href="http://www.umontanamediaarts.com/MART342-2016/">Visit</a>
+			</div>
 		</div>
-	</blockquote>
-</div>
-
-<div class="darker">
-	<div class="container">
-		<h2 class="editable">Join us</h2>
-		<p class="editable" style="text-align: center;">Sign up to hear the latest news and progress in our fight for the sheep vote.</p>
-		<form action="{{ site.newsletter_action }}" method="post">
-			<input type="text" name="EMAIL" placeholder="Email">
-			<input type="submit" value="Sign up"/>
-		</form>
+	</div>
+	<div class="columns">
+		<div>
+			<h2>Intro to Web Design</h2>
+			<p class="roles">
+				<span class="inst">Instructor</span>
+				<span class="cd">Cirriculum Designer</span>
+				<span class="id">Instructional Designer</span>
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="button">
+				<a href="http://www.umontanamediaarts.com/MART342-2016/">Visit</a>
+			</div>
+		</div>
+		<div>
+			<img src="/images/sheep2.jpg" alt="Sheep">
+		</div>
+	</div>
+	<div class="columns">
+		<div>
+			<img src="/images/sheep2.jpg" alt="Sheep">
+		</div>
+		<div>
+			<h2>Introduction to Film Editing</h2>
+			<p class="roles">
+				<span class="id">Instructional Designer</span>
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="button">
+				<a href="http://www.umontanamediaarts.com/MART342-2016/">Visit</a>
+			</div>
+		</div>
 	</div>
 </div>
 
+
 <div class="darker">
-	<div class="container">
-		<h2 class="editable">Updates</h2>
-		<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Update</a></p>
+	<div class="container" id="upcoming">
+		<h2>In Development:</h2>
 		<div class="posts">
 			{% for post in site.posts %}
 				<div class="post">
 					<div class="image" style="background-image: url({{ post.featured_image}})"></div>
 					<div class="post-content">
-						<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>
+						<!--<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>-->
 						<h3>{{ post.title }}</h3>
-
-						{{ post.content }}
-						<p class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="btn"><strong>&#9998;</strong> Edit Update</a></p>
+						<div class="progress-bar">
+							<div class="percent-complete" style="width: {{ post.percent_complete }}"></div>
+						</div>
+						{% if post.content contains "<!-- more -->" %}
+	    				{{ post.content | split:"<!-- more -->" | first }}
+				      <div style="text-align:right;">
+				        <a href="{{ post.url }}" style="color:#333;"><i class="fas fa-arrow-right"></i> Read More </a>
+				      </div>
+					    {% else %}
+					      {{ post.content }}
+					  {% endif %}
 					</div>
 				</div>
 			{% endfor %}
 		</div>
 	</div>
 </div>
+
+
+<div class="container" id="about">
+	<h2 style="text-align: left;">Hey, we want to help you&nbsp;<span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "make.", "tinker.", "game.", "experiment.", "design.", "code.", "learn!" ]'></span></h2>
+
+	<ul class="thirds">
+		<li>
+			<div class="image"><i class="fas fa-shoe-prints"></i></div>
+			<h3>How</h3>
+			<p>Step-by-step instructions on producing creative works in the digital age. Lessons are accessible, digestible, and available 24/7.</p>
+		</li>
+
+		<li>
+			<div class="image"><i class="fas fa-university"></i></div>
+			<h3>University Credit</h3>
+			<p>Students at the University of Montana are encouraged to get upper-division credits with us through the School of Media Arts.</p>
+		</li>
+
+		<li>
+			<div class="image"><i class="fas fa-box-open"></i></div>
+			<h3>Open-For-All</h3>
+			<p>Not in college? Not to worry - these materials are freely accessible as Open Educational Resources (OER).</p>
+		</li>
+	</ul>
+</div>
+
+<div class="darker">
+	<div class="container">
+		<blockquote>
+			<p class="quote editable">The ultimate measure of a sheep is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
+			<div class="attribute">
+				<p class="meta">
+					<span class="image"><img src="{{ site.baseurl }}/images/justine.svg" alt="Justine"></span>
+					<span class="author editable"><strong>Justine</strong></span>
+				</p>
+			</div>
+		</blockquote>
+	</div>
+</div>
+
+
+
+<script>
+	var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 8) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #999 }";
+  document.body.appendChild(css);
+};</script>

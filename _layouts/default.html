@@ -6,7 +6,10 @@
 
 		{% seo %}
 
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css"/>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" sizes="32x32">
@@ -22,56 +25,65 @@
 	</head>
 	<body>
 		<nav>
-			<div class="container">
+			<div class="container" style="width: 33%;">
 				<a href="{{ site.baseurl }}/">{% include logo.html %}</a>
+			</div>
+			<div class="container">
+				<ul>
+					<li><a href="#featured">Featured</a></li>
+					<li><a href="#offerings">Offerings</a></li>
+					<li><a href="#upcoming">Upcoming</a></li>
+					<li><a href="{{ site.url }}#about">About</a></li>
+				</ul>
 			</div>
 		</nav>
 		<div class="content">
 			{{ content }}
 		</div>
+
+		<div class="callout">
+			<div class="callout-arrow"></div>
+		</div>
 		<footer>
-			<p class="editor-link" style="margin-bottom: 20px;"><a href="cloudcannon:collections/_data/company.yml" class="btn"><strong>&#9998;</strong> Update footer</a></p>
 			<div class="container">
 				<div class="about">
 					<p>{{ site.data.company.mission_statement }}</p>
 				</div>
 
 				<div class="contact">
-					<address>
-						<a href="https://www.google.com/maps/place/{{ site.data.company.address | url_encode }}">
-							{% include icons/footer.html icon="place" %} {{ site.data.company.address }}
+					<!--<p class="phone">
+						<a href="{{ site.author.website }}" target="_blank">
+							<i class="fas fa-user"></i> Justine Evans
 						</a>
-					</address>
-					<p class="email">
-						<a href="mailto:{{ site.data.company.email }}">
-							{% include icons/footer.html icon="email" %} {{ site.data.company.email }}
+					</p>-->
+					<p class="name">
+						<a href="{{ site.data.company.website }}" target="_blank">
+							<i class="fas fa-globe"></i> Media-Ed-Online
 						</a>
 					</p>
-					<p class="phone">
-						<a href="tel:{{ site.data.company.phone | replace: ' ', '-' }}">
-							{% include icons/footer.html icon="phone" %} {{ site.data.company.phone }}
+					<p class="address">
+							<i class="fas fa-map-marker-alt"></i> Missoula, MT, USA
+					</p>
+					<p class="email">
+						<a href="mailto:{{ site.data.company.email }}">
+							<i class="fas fa-envelope"></i> admin@media-ed-online.com
 						</a>
 					</p>
 				</div>
 
 				<div class="sharing">
-					<a class="facebook" href="https://www.facebook.com/{{ site.data.company.facebook }}">
-						{% include icons/social-media.html social_icon="facebook" %}
+					<a class="linkedin" href="https://www.linkedin.com/in/{{ site.data.company.linkedin }}" target="_blank">
+						<i class="fab fa-linkedin"></i>
 					</a>
-					<a class="twitter" href="https://twitter.com/{{ site.data.company.twitter }}">
-						{% include icons/social-media.html social_icon="twitter" %}
+					<a class="codepen" href="https://codepen.io/{{ site.data.company.codepen }}" target="_blank">
+						<i class="fab fa-codepen"></i>
 					</a>
-					<a class="google-plus" href="https://plus.google.com/{{ site.data.company.google_plus }}">
-						{% include icons/social-media.html social_icon="google-plus" %}
+					<a class="github" href="https://github.com/{{ site.data.company.github }}" target="_blank">
+						<i class="fab fa-github"></i>
 					</a>
 				</div>
 			</div>
 		</footer>
-		<p class="copyright">
-			<a href="https://cloudcannon.com/">
-				Template by CloudCannon
-			</a>
-		</p>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script type="text/javascript">
 			$('a[href*=\\#]').on('click', function(event){
@@ -80,6 +92,15 @@
 					event.preventDefault();
 					$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
 				}
+			});
+			$(window).scroll(function() {
+			    var scroll = $(window).scrollTop();
+			    if (scroll > 25) {
+			        $("nav").addClass("active");
+			    }
+			    else {
+			        $("nav").removeClass("active");
+			    }
 			});
 		</script>
 	</body>
