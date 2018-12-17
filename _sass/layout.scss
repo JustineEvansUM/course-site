@@ -81,9 +81,13 @@ nav {
 	}
 	ul {
 		float: right;
+		display: none;
 		li {
 			display: inline-block;
 			margin: 0 1rem;
+		}
+		@media #{$desktop} {
+			display: inline-block;
 		}
 	}
 }
@@ -523,6 +527,8 @@ footer {
 	span {
 	padding: 1px 5px;
 	border-radius: 5px;
+	display: inline-block;
+	margin: 0 2px 5px 0;
 	}
 
 	.inst {
