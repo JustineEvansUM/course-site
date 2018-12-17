@@ -3,15 +3,24 @@
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	padding: 100px 30px;
+	padding: 60px 30px;
 	box-sizing: border-box;
+
+ h2 {
+		text-align: left;
+		font-family: 'Roboto', sans-serif;
+		font-weight: normal;
+		font-style: normal;
+		letter-spacing: 1px;
+		margin: 0;
+	}
 }
 
 
 header {
 	padding-bottom: 50px;
 
-	@media #{$desktop} {
+	@media #{$tablet} {
 		.container {
 			display: flex;
 		}
@@ -77,22 +86,55 @@ nav {
 	}
 	a:hover {
 		color: $brand-color;
-		transition: all 0.3s linear;
+		transition: all 0.15s linear;
 	}
-	ul {
-		float: right;
-		display: none;
-		li {
-			display: inline-block;
-			margin: 0 1rem;
-		}
-		@media #{$desktop} {
-			display: inline-block;
+	.logo {
+		margin-top: 5px;
+		width: auto;
+	}
+	.menu {
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		ul {
+			float: right;
+			display: none;
+			li {
+				display: inline-block;
+				margin: 0 .5rem;
+			}
+			li::after {
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: "\f111";
+				font-size: 5px;
+				color: $brand-yellow;
+				vertical-align: middle;
+				margin-left: 1.5rem;
+			}
+			li:last-of-type::after {
+				content: " "
+			}
+			@media #{$desktop} {
+				display: inline-block;
+			}
 		}
 	}
 }
 nav.active {
 		box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.top-button {
+	display: none;
+	@media #{tablet} {
+		display: inline;
+		width: 75px;
+		height: 75px;
+		border-radius: 100%;
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		background: $brand-color;
+	}
 }
 
 .thirds {
@@ -316,7 +358,7 @@ footer {
 
 	i:hover {
 		color: #fff;
-		transition: all 0.3s linear;
+		transition: all 0.15s linear;
 	}
 
 	a {
@@ -479,14 +521,6 @@ footer {
 			padding: 0 30px;
 		}
 	}
-
-	h2 {
-		text-align: left;
-		font-family: 'BebasNeueRegular';
-		font-weight: normal;
-		font-style: normal;
-		letter-spacing: 1px;
-	}
 }
 
 .darker {
@@ -507,10 +541,9 @@ footer {
 }
 
 .featured {
-	font-size: 1.5em;
-	/*font-family: 'BebasNeueRegular';*/
-	font-weight: normal;
-	font-style: normal;
+	font-size: 1.25em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	letter-spacing: 1px;
 	margin: 10px 0;
 	padding: 5px;
@@ -540,4 +573,11 @@ footer {
 	.id {
 		background: $brand-red;
 	}
+}
+.divider {
+	width: 200px;
+	height: 10px;
+	margin: 1rem auto;
+	border-top: 5px solid $brand-yellow;
+	border-bottom: 5px solid $brand-yellow;
 }

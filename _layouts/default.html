@@ -25,10 +25,10 @@
 	</head>
 	<body>
 		<nav>
-			<div class="container" style="width: 33%;">
+			<div class="container logo">
 				<a href="{{ site.baseurl }}/">{% include logo.html %}</a>
 			</div>
-			<div class="container">
+			<div class="container menu">
 				<ul>
 					<li><a href="#featured">Featured</a></li>
 					<li><a href="#offerings">Offerings</a></li>
@@ -37,6 +37,9 @@
 				</ul>
 			</div>
 		</nav>
+		<!-- Back to Top, displayed at tablet breakpoint -->
+		<div class="top-button">top</div>
+
 		<div class="content">
 			{{ content }}
 		</div>
@@ -90,7 +93,7 @@
 				var el = $(this.hash);
 				if (el.length > 0) {
 					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+					$('html,body').animate({scrollTop:$(this.hash).offset().top -75}, 500);
 				}
 			});
 			$(window).scroll(function() {
