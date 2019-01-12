@@ -335,6 +335,7 @@ blockquote {
 	height: 25px;
 	background-color: #f8fafb;
 	/*background-color: #fff;*/
+	position: relative;
 }
 .callout-arrow {
   width: 0;
@@ -342,12 +343,16 @@ blockquote {
   border-left: 0px solid transparent;
   border-right: 25px solid transparent;
   border-bottom: 25px solid #555;
+	display: inline-block;
 	position: absolute;
-	right: 5em;
+	top: -25px;
+	right: 5%;
 }
+
 
 footer {
 	background: #555;
+	position: relative;
 
 	.container {
 		padding: 30px;

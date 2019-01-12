@@ -33,10 +33,10 @@
 			</div>
 			<div class="container menu">
 				<ul>
-					<li><a href="#featured">Featured</a></li>
-					<li><a href="#offerings">Offerings</a></li>
-					<li><a href="#upcoming">Upcoming</a></li>
-					<li><a href="#about">About</a></li>
+					<li><a href="{{site.url}}#featured">Featured</a></li>
+					<li><a href="{{site.url}}#offerings">Offerings</a></li>
+					<li><a href="{{site.url}}#upcoming">Upcoming</a></li>
+					<li><a href="{{site.url}}#about">About</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -47,11 +47,12 @@
 			{{ content }}
 		</div>
 
-		<div class="callout">
-			<div class="callout-arrow"></div>
-		</div>
+
 		<footer>
-			<div class="container">
+			<!--<div class="callout">-->
+				<div class="callout-arrow"></div>
+			<!--</div>-->
+			<div class="container footer">
 				<div class="about">
 					<p>{{ site.data.company.mission_statement }}</p>
 				</div>
@@ -96,7 +97,7 @@
 				var el = $(this.hash);
 				if (el.length > 0) {
 					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top -75}, 500);
+					$('html,body').animate({scrollTop:$(this.hash).offset().top -20}, 500);
 				}
 			});
 			$(window).scroll(function() {
