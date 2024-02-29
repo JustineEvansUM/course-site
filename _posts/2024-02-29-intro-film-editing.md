@@ -8,6 +8,10 @@ percent_complete: 10%;
 ---
 
 
+This is just the beginning. We're working harder than ever for the rights of sheep everywhere.
+
+<!-- more -->
+
 <div class="card-deck">
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
