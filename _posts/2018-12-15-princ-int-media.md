@@ -1,6 +1,6 @@
 ---
 title: Interaction Design
-permalink: /princ-int-media/
+permalink: /course-site/princ-int-media/
 author_staff_member: Justine
 date: 2018-12-01
 featured_image:  https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg
