@@ -1,7 +1,7 @@
 ---
 title: Wordpress I & II
 author_staff_member: Justine Evans
-permalink: /course-site/wordpress/
+permalink: /wordpress/
 date: 2018-11-05
 featured_image:  https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg
 percent_complete: 50%;
