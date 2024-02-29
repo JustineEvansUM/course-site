@@ -2,26 +2,20 @@
 layout: default
 title: Home
 ---
-
-<div class="container">
-	<div class="column">
-		<div>
-			<h2>Introduction to Film Editing</h2>
-			<p class="roles">
-				<span class="inst">BA Course</span>
-				<span class="cd">BFA Course</span>
-				<span class="id">Elective</span>
-			</p>
-			<p>Offered autumn and spring. Study of the history, process and philosophy of narrative ﬁlm/video editing.</p>
-			<div class="button">
-				<a href="./index.html">Visit</a>
+<header id="welcome">
+	<div class="container">
+		<div class="column">
+			<div>
+				<h1>Filmmaking and Media</h1>
+				<p>Courses on making in the digital age, offered through the School of Visual Arts and Media, the University of Montana.</p>
+				<p>Interested in registering? <a href="mailto:#">E-mail us</a> for more information.
 			</div>
 		</div>
+		<div class="column">
+			<img src="images/sheep.jpg" alt="Sheep">
+		</div>
 	</div>
-	<div class="column">
-		<img src="images/sheep.jpg" alt="Sheep">
-	</div>
-</div>
+</header>
 
 
 <div class="divider"></div>
@@ -60,134 +54,135 @@ title: Home
 			<img src="images/sheep2.jpg" alt="Sheep">
 		</div>
 	</div>
+</div>
 
 
-	<div class="darker">
-		<div class="container" id="upcoming">
-			<h2>In Development:</h2>
-			<div class="posts">
-				{% for post in site.posts %}
-				<div class="post">
-					<div class="image" style="background-image: url({{ post.featured_image}})"></div>
-					<div class="post-content">
-						<!--<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>-->
-						<h3>{{ post.title }}</h3>
-						<div class="progress-bar">
-							<div class="percent-complete" style="width: {{ post.percent_complete }}"></div>
-						</div>
-						{% if post.content contains "<!-- more -->" %}
-						{{ post.content | split:"<!-- more -->" | first }}
-						<div style="text-align:right;">
-							<a href="{{ post.url }}" style="color:#333;"><i class="fas fa-arrow-right"></i> Read More </a>
-						</div>
-						{% else %}
-						{{ post.content }}
-						{% endif %}
+<div class="darker">
+	<div class="container" id="upcoming">
+		<h2>In Development:</h2>
+		<div class="posts">
+			{% for post in site.posts %}
+			<div class="post">
+				<div class="image" style="background-image: url({{ post.featured_image}})"></div>
+				<div class="post-content">
+					<!--<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>-->
+					<h3>{{ post.title }}</h3>
+					<div class="progress-bar">
+						<div class="percent-complete" style="width: {{ post.percent_complete }}"></div>
 					</div>
+					{% if post.content contains "<!-- more -->" %}
+					{{ post.content | split:"<!-- more -->" | first }}
+					<div style="text-align:right;">
+						<a href="{{ post.url }}" style="color:#333;"><i class="fas fa-arrow-right"></i> Read More </a>
+					</div>
+					{% else %}
+					{{ post.content }}
+					{% endif %}
 				</div>
-				{% endfor %}
 			</div>
+			{% endfor %}
 		</div>
 	</div>
+</div>
 
 
-	<div class="container" id="about">
-		<h2>Hey, I want to help you&nbsp;<span class="txt-rotate" data-period="2000" data-rotate='[ "make.", "tinker.", "game.", "explore.", "design.", "code.", "learn!" ]'></span></h2>
+<div class="container" id="about">
+	<h2>Hey, I want to help you&nbsp;<span class="txt-rotate" data-period="2000" data-rotate='[ "make.", "tinker.", "game.", "explore.", "design.", "code.", "learn!" ]'></span></h2>
 
-		<ul class="thirds">
-			<li>
-				<div class="image"><i class="fas fa-shoe-prints"></i></div>
-				<h3>How</h3>
-				<p>Step-by-step instructions on producing creative works in the digital age. Lessons are accessible, digestible, and available 24/7.</p>
-			</li>
+	<ul class="thirds">
+		<li>
+			<div class="image"><i class="fas fa-shoe-prints"></i></div>
+			<h3>How</h3>
+			<p>Step-by-step instructions on producing creative works in the digital age. Lessons are accessible, digestible, and available 24/7.</p>
+		</li>
 
-			<li>
-				<div class="image"><i class="fas fa-university"></i></div>
-				<h3>University Credit</h3>
-				<p>Students at the University of Montana are encouraged to get upper-division credits with us through the School of Media Arts.</p>
-			</li>
+		<li>
+			<div class="image"><i class="fas fa-university"></i></div>
+			<h3>University Credit</h3>
+			<p>Students at the University of Montana are encouraged to get upper-division credits with us through the School of Media Arts.</p>
+		</li>
 
-			<li>
-				<div class="image"><i class="fas fa-box-open"></i></div>
-				<h3>Open-For-All</h3>
-				<p>Not in college? Not to worry - these materials are freely accessible as Open Educational Resources (OER).</p>
-			</li>
-		</ul>
+		<li>
+			<div class="image"><i class="fas fa-box-open"></i></div>
+			<h3>Open-For-All</h3>
+			<p>Not in college? Not to worry - these materials are freely accessible as Open Educational Resources (OER).</p>
+		</li>
+	</ul>
+</div>
+
+<div class="darker">
+	<div class="container">
+		<blockquote>
+			<p class="quote editable">The ultimate measure of a sheep is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
+			<div class="attribute">
+				<p class="meta">
+					<span class="image"><img src="{{ site.baseurl }}/images/justine.svg" alt="Justine"></span>
+					<span class="author editable"><strong>Justine</strong></span>
+				</p>
+			</div>
+		</blockquote>
 	</div>
-
-	<div class="darker">
-		<div class="container">
-			<blockquote>
-				<p class="quote editable">The ultimate measure of a sheep is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
-				<div class="attribute">
-					<p class="meta">
-						<span class="image"><img src="{{ site.baseurl }}/images/justine.svg" alt="Justine"></span>
-						<span class="author editable"><strong>Justine</strong></span>
-					</p>
-				</div>
-			</blockquote>
-		</div>
-	</div>
+</div>
 
 
 
-	<script>
-		var TxtRotate = function(el, toRotate, period) {
-			this.toRotate = toRotate;
-			this.el = el;
-			this.loopNum = 0;
-			this.period = parseInt(period, 8) || 2000;
-			this.txt = '';
-			this.tick();
+<script>
+	var TxtRotate = function(el, toRotate, period) {
+		this.toRotate = toRotate;
+		this.el = el;
+		this.loopNum = 0;
+		this.period = parseInt(period, 8) || 2000;
+		this.txt = '';
+		this.tick();
+		this.isDeleting = false;
+	};
+
+	TxtRotate.prototype.tick = function() {
+		var i = this.loopNum % this.toRotate.length;
+		var fullTxt = this.toRotate[i];
+
+		if (this.isDeleting) {
+			this.txt = fullTxt.substring(0, this.txt.length - 1);
+		} else {
+			this.txt = fullTxt.substring(0, this.txt.length + 1);
+		}
+
+		this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+		var that = this;
+		var delta = 300 - Math.random() * 100;
+
+		if (this.isDeleting) {
+			delta /= 2;
+		}
+
+		if (!this.isDeleting && this.txt === fullTxt) {
+			delta = this.period;
+			this.isDeleting = true;
+		} else if (this.isDeleting && this.txt === '') {
 			this.isDeleting = false;
-		};
+			this.loopNum++;
+			delta = 500;
+		}
 
-		TxtRotate.prototype.tick = function() {
-			var i = this.loopNum % this.toRotate.length;
-			var fullTxt = this.toRotate[i];
+		setTimeout(function() {
+			that.tick();
+		}, delta);
+	};
 
-			if (this.isDeleting) {
-				this.txt = fullTxt.substring(0, this.txt.length - 1);
-			} else {
-				this.txt = fullTxt.substring(0, this.txt.length + 1);
+	window.onload = function() {
+		var elements = document.getElementsByClassName('txt-rotate');
+		for (var i = 0; i < elements.length; i++) {
+			var toRotate = elements[i].getAttribute('data-rotate');
+			var period = elements[i].getAttribute('data-period');
+			if (toRotate) {
+				new TxtRotate(elements[i], JSON.parse(toRotate), period);
 			}
-
-			this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-			var that = this;
-			var delta = 300 - Math.random() * 100;
-
-			if (this.isDeleting) {
-				delta /= 2;
-			}
-
-			if (!this.isDeleting && this.txt === fullTxt) {
-				delta = this.period;
-				this.isDeleting = true;
-			} else if (this.isDeleting && this.txt === '') {
-				this.isDeleting = false;
-				this.loopNum++;
-				delta = 500;
-			}
-
-			setTimeout(function() {
-				that.tick();
-			}, delta);
-		};
-
-		window.onload = function() {
-			var elements = document.getElementsByClassName('txt-rotate');
-			for (var i = 0; i < elements.length; i++) {
-				var toRotate = elements[i].getAttribute('data-rotate');
-				var period = elements[i].getAttribute('data-period');
-				if (toRotate) {
-					new TxtRotate(elements[i], JSON.parse(toRotate), period);
-				}
-			}
-			// INJECT CSS
-			var css = document.createElement("style");
-			css.type = "text/css";
-			css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #999 }";
-			document.body.appendChild(css);
-		};
-	</script>
+		}
+		// INJECT CSS
+		var css = document.createElement("style");
+		css.type = "text/css";
+		css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #999 }";
+		document.body.appendChild(css);
+	};
+</script>
