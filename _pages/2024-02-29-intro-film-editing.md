@@ -1,16 +1,10 @@
 ---
 title: Intro to Animation
-permalink: /intro-film-editing/
+permalink: course-site/intro-film-editing/
 author_staff_member: Justine
 date: 2024-02-29
 featured_image: https://images.pexels.com/photos/262272/pexels-photo-262272.jpeg
-percent_complete: 10%;
 ---
-
-
-This is just the beginning. We're working harder than ever for the rights of sheep everywhere.
-
-<!-- more -->
 
 <div class="card-deck">
   <div class="card">
