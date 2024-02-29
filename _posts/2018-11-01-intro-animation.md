@@ -1,6 +1,6 @@
 ---
 title: Intro to Animation
-permalink: /course-site/intro-animation/
+permalink: /intro-animation/
 author_staff_member: Justine
 date: 2018-11-01
 featured_image: https://images.pexels.com/photos/262272/pexels-photo-262272.jpeg
