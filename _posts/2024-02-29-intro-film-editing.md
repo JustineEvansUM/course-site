@@ -8,25 +8,53 @@ percent_complete: 10%;
 ---
 
 
-<div class="posts">
-  {% for post in site.posts %}
-  <div class="post">
-    <div class="image" style="background-image: url({{ post.featured_image}})"></div>
-    <div class="post-content">
-      <!--<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>-->
-      <h3>{{ post.title }}</h3>
-      <div class="progress-bar">
-        <div class="percent-complete" style="width: {{ post.percent_complete }}"></div>
-      </div>
-      {% if post.content contains "<!-- more -->" %}
-      {{ post.content | split:"<!-- more -->" | first }}
-      <div style="text-align:right;">
-        <a href="{{ post.url }}" style="color:#333;"><i class="fas fa-arrow-right"></i> Read More </a>
-      </div>
-      {% else %}
-      {{ post.content }}
-      {% endif %}
-    </div>
+<div class="card" aria-hidden="true">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
   </div>
-  {% endfor %}
+</div>
+
+<div class="card" aria-hidden="true">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+  </div>
+</div>
+
+<div class="card" aria-hidden="true">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-4"></span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+  </div>
 </div>
