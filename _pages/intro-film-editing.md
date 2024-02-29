@@ -1,7 +1,7 @@
 ---
 title: Intro to Animation
-permalink: course-site/intro-film-editing/
 author_staff_member: Justine
+permalink: /intro-film-editing/
 date: 2024-02-29
 featured_image: https://images.pexels.com/photos/262272/pexels-photo-262272.jpeg
 ---
