@@ -47,6 +47,16 @@ defaults:
   -
     scope:
       path: ""
+      type: "pages"
+    values:
+      layout: "post"
+      _options:
+        content:
+          width: 1880
+          height: 1880
+  -
+    scope:
+      path: ""
     values:
       layout: "default"
 
