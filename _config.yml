@@ -1,14 +1,14 @@
 # ----
 # Site
 
-title: Media-Ed-Online
+title: SVMA Filmmaking Online
 url: https://justineevansum.github.io/course-site/
 baseurl: https://justineevansum.github.io/course-site/
 google_analytics_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: A distance learning provider of courses and lessons from the world of digital design and media.
+description: Site for coursework from the College of Arts and Media, University of Montana, Missoula
 author:
   name: Justine Evans
   email: justine.n.evans@gmail.com
